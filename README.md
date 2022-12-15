@@ -16,7 +16,7 @@ _Follow the following steps to install and run the demo app._
    ```sh
    git clone https://github.com/chan-thomas/express-intro.git
    ```
-2. Install NPM packages
+2. Install the dependency. Run the istall in the **express-intro** folder
    ```sh
    npm install
    ```
