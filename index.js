@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const fs = require('fs')
-const port = 4200
+const port = process.env.PORT || 4200
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
