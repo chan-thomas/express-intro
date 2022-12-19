@@ -28,7 +28,7 @@ app.get('/adduser',(req, res)=>{
     fs.readFile('./index.html', 'utf-8', (err, data)=>{
         res.send(`${data}`)
     })
-})greeting
+})
 // html form or Postname
 app.post('/addUser',(req,res)=>{
     const email = req.body.email
