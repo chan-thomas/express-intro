@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const fs = require('fs')
 const port = process.env.PORT || 4200
+const greeting = process.env.GREETING || 'Server is up'
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
@@ -27,7 +28,7 @@ app.get('/adduser',(req, res)=>{
     fs.readFile('./index.html', 'utf-8', (err, data)=>{
         res.send(`${data}`)
     })
-})
+})greeting
 // html form or Postname
 app.post('/addUser',(req,res)=>{
     const email = req.body.email
@@ -54,5 +55,5 @@ app.post('/addUsers',(req,res)=>{
 })
 
 app.listen(port, ()=>{
-console.log(`Server is up. Listening on port ${port}`);
+console.log(`${greeting}. Listening on port ${port}`);
 })
